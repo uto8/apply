@@ -1,0 +1,916 @@
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.top-slide {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  -webkit-animation-name: kf-top-slide;
+          animation-name: kf-top-slide;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.top-slide .content {
+  width: 100%;
+  color: #CC3300;
+  text-align: center;
+}
+.top-slide .content h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+@-webkit-keyframes kf-top-slide {
+  0% {
+    z-index: 3;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  99% {
+    z-index: 3;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes kf-top-slide {
+  0% {
+    z-index: 3;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  30% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  70% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  99% {
+    z-index: 3;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+.cover-slide {
+  position: relative;
+  overflow: hidden;
+}
+.cover-slide .title {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0;
+}
+.cover-slide::after {
+  content: "";
+  opacity: 0;
+  background-color: gray;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cover-slide.inview .title {
+  opacity: 1;
+}
+.cover-slide.inview::after {
+  -webkit-animation-name: kf-cover-slide;
+          animation-name: kf-cover-slide;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.img-zoom {
+  vertical-align: bottom;
+  opacity: 0;
+}
+
+.inview .img-zoom {
+  opacity: 1;
+  -webkit-animation-name: kf-img-show;
+          animation-name: kf-img-show;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-cover-slide {
+  0% {
+    left: 0;
+    right: 100%;
+    opacity: 1;
+  }
+  50% {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes kf-cover-slide {
+  0% {
+    left: 0;
+    right: 100%;
+    opacity: 1;
+  }
+  50% {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    right: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes kf-img-show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50.1% {
+    opacity: 1;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+body {
+  font-family: dnp-shuei-gothic-kin-std, sans-serif;
+}
+
+section#main-visual {
+  background-image: url(https://www.bing.com/th/id/OGC.46a9d8b186ef8b84af49bb8a032d3f70?pid=1.7&rurl=https%3a%2f%2fimg.gifmagazine.net%2fgifmagazine%2fimages%2f352243%2foriginal.gif&ehk=NrI2BDn%2fWaivT3k2hnoifv%2f0Nd6TEw6PAtsW4xERuAA%3d);
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: -2;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section#main-visual::after {
+  content: "";
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+section#main-visual .content {
+  padding-left: 40px;
+  color: #CC3300;
+  z-index: 2;
+}
+section#main-visual .content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+section#main-visual .content p {
+  font-size: 22px;
+}
+
+section#section01 {
+  background-color: white;
+  padding: 120px 15px 40px 15px;
+  margin-bottom: 80px;
+}
+section#section01 .box {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+section#section01 .box .title {
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+section#section01 .box .title p {
+  border-top: 2px black solid;
+  padding-top: 18px;
+  margin-bottom: 70px;
+  font-size: 19px;
+}
+section#section01 .box .title h2 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  color: #CC3300;
+}
+section#section01 .box .title h2.inview {
+  -webkit-animation-name: kf-text-popup;
+          animation-name: kf-text-popup;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+section#section01 .box .title h6 {
+  font-size: 20px;
+  font-weight: bold;
+}
+section#section01 .box .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section#section01 .box .content .discription {
+  width: 50%;
+}
+section#section01 .box .content .discription p {
+  font-size: 16px;
+  line-height: 2;
+}
+section#section01 .box .content .discription img {
+  width: 100%;
+}
+section#section01 .box .content .img {
+  width: 50%;
+  padding: 30px 0 0 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+section#section01 .box .content .img img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+section#section02 {
+  height: 100vh;
+  background-color: white;
+  padding: 20px 15px 40px 15px;
+  margin-bottom: 80px;
+  background-image: url(images/pc1.webp);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+section#section02 .title {
+  margin-bottom: 40px;
+}
+section#section02 .title h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #CC3300;
+}
+section#section02 .title p {
+  font-size: 16px;
+  color: white;
+}
+section#section02 .row {
+  color: white;
+}
+section#section02 .row h3 {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 60px;
+}
+section#section02 .row .item2 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-bottom: 50px;
+}
+section#section02 .row .item3 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-bottom: 50px;
+}
+section#section02 .row .item4 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-bottom: 50px;
+}
+
+#section02.hover1 {
+  background-image: url(images/section0201.webp);
+}
+
+#section02.hover2 {
+  background-image: url(images/images.jpg);
+}
+
+#section02.hover3 {
+  background-image: url(images/section0203.webp);
+}
+
+#section02.hover4 {
+  background-image: url(images/section0204.webp);
+}
+
+section#section03 {
+  background-color: white;
+  padding: 120px 15px 0 15px;
+}
+section#section03 .box {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+section#section03 .box .title {
+  margin-bottom: 60px;
+}
+section#section03 .box .title p {
+  border-top: 2px black solid;
+  padding-top: 18px;
+  margin-bottom: 70px;
+  font-size: 19px;
+}
+section#section03 .box .title h2 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  color: #CC3300;
+}
+section#section03 .box .title h2.inview {
+  -webkit-animation-name: kf-text-popup;
+          animation-name: kf-text-popup;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+section#section03 .box .title h6 {
+  font-size: 20px;
+  font-weight: bold;
+}
+section#section03 .box .content .item {
+  border-top: 1px solid black;
+  padding-top: 35px;
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section#section03 .box .content .item .sentence {
+  width: 50%;
+  padding-right: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+section#section03 .box .content .item .sentence .work-title {
+  overflow: hidden;
+}
+section#section03 .box .content .item .sentence h4 {
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+section#section03 .box .content .item .sentence p {
+  font-size: 17px;
+}
+section#section03 .box .content .item .sentence a {
+  font-weight: bold;
+}
+section#section03 .box .content .item .img {
+  width: 50%;
+}
+section#section03 .box .content .item .img img {
+  width: 100%;
+  margin: auto;
+}
+
+.work-item.view .img img {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.work-item.view .sentence h4 {
+  -webkit-animation-name: kf-text-popdown;
+          animation-name: kf-text-popdown;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.work-item.inview .img img {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+.work-item.inview .sentence h4 {
+  -webkit-animation-name: kf-text-popup;
+          animation-name: kf-text-popup;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes kf-text-popup {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes kf-text-popup {
+  0% {
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes kf-text-popdown {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes kf-text-popdown {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+section#section04 {
+  background-color: white;
+  padding: 120px 15px 100px 15px;
+}
+section#section04 .box {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+}
+section#section04 .box .title {
+  margin-bottom: 60px;
+}
+section#section04 .box .title p {
+  border-top: 2px black solid;
+  padding-top: 18px;
+  margin-bottom: 70px;
+  font-size: 19px;
+}
+section#section04 .box .title h2 {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  color: #CC3300;
+}
+section#section04 .box .title h2.inview {
+  -webkit-animation-name: kf-text-popup;
+          animation-name: kf-text-popup;
+  -webkit-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+section#section04 .box .title h6 {
+  font-size: 20px;
+  font-weight: bold;
+}
+section#section04 .box .content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  -webkit-box-shadow: 2px 1px 13px 0px;
+          box-shadow: 2px 1px 13px 0px;
+}
+section#section04 .box .content p {
+  text-align: center;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .top-slide .content {
+    width: 100%;
+    color: #CC3300;
+    text-align: center;
+  }
+  .top-slide .content h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  section#main-visual {
+    background-position: center center;
+    padding: 15px;
+  }
+  section#main-visual .content {
+    padding-left: 10px;
+  }
+  section#main-visual .content h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  section#main-visual .content p {
+    font-size: 18px;
+  }
+
+  section#section01 {
+    padding: 70px 15px 40px 15px;
+    margin-bottom: 80px;
+  }
+  section#section01 .box .title {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  section#section01 .box .title p {
+    border-top: 2px black solid;
+    padding-top: 18px;
+    margin-bottom: 70px;
+    font-size: 18px;
+  }
+  section#section01 .box .title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #CC3300;
+  }
+  section#section01 .box .title h2.inview {
+    -webkit-animation-name: kf-text-popup;
+            animation-name: kf-text-popup;
+    -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  section#section01 .box .title h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  section#section01 .box .content {
+    display: block;
+  }
+  section#section01 .box .content .discription {
+    width: 100%;
+  }
+  section#section01 .box .content .discription p {
+    font-size: 16px;
+    line-height: 2;
+  }
+  section#section01 .box .content .discription img {
+    width: 100%;
+  }
+  section#section01 .box .content .img {
+    width: 100%;
+    padding: 30px 0 0 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  section#section01 .box .content .img img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  section#section02 {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 15px 40px 15px;
+    margin-bottom: 40px;
+    background-image: url(images/pc1.webp);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  section#section02 .title {
+    margin-bottom: 20px;
+  }
+  section#section02 .title h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #CC3300;
+  }
+  section#section02 .title p {
+    font-size: 16px;
+    color: white;
+  }
+  section#section02 .row {
+    color: white;
+    width: 1280px;
+  }
+  section#section02 .row h3 {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+  section#section02 .row .item2 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin-bottom: 10px;
+  }
+  section#section02 .row .item3 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin-bottom: 10px;
+  }
+  section#section02 .row .item4 {
+    padding-top: 50px;
+    padding-bottom: 100px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin-bottom: 10px;
+  }
+
+  section#section03 {
+    background-color: white;
+    padding: 60px 15px 0 15px;
+  }
+  section#section03 .box {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section#section03 .box .title {
+    margin-bottom: 30px;
+  }
+  section#section03 .box .title p {
+    font-size: 17px;
+  }
+  section#section03 .box .title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 45px;
+    color: #CC3300;
+  }
+  section#section03 .box .title h2.inview {
+    -webkit-animation-name: kf-text-popup;
+            animation-name: kf-text-popup;
+    -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  section#section03 .box .title h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  section#section03 .box .content .item {
+    border-top: 1px solid black;
+    padding-top: 35px;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+  }
+  section#section03 .box .content .item .sentence {
+    width: 100%;
+    padding-right: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  section#section03 .box .content .item .sentence .work-title {
+    overflow: hidden;
+  }
+  section#section03 .box .content .item .sentence h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  section#section03 .box .content .item .sentence p {
+    font-size: 17px;
+  }
+  section#section03 .box .content .item .sentence a {
+    font-weight: bold;
+  }
+  section#section03 .box .content .item .img {
+    width: 100%;
+  }
+  section#section03 .box .content .item .img img {
+    width: 100%;
+    margin: auto;
+  }
+
+  section#section04 {
+    background-color: white;
+    padding: 60px 15px;
+  }
+  section#section04 .box .title {
+    margin-bottom: 30px;
+  }
+  section#section04 .box .title p {
+    border-top: 2px black solid;
+    padding-top: 18px;
+    margin-bottom: 70px;
+    font-size: 18px;
+  }
+  section#section04 .box .title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #CC3300;
+  }
+  section#section04 .box .title h2.inview {
+    -webkit-animation-name: kf-text-popup;
+            animation-name: kf-text-popup;
+    -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  section#section04 .box .title h6 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  section#section04 .box .content {
+    padding: 20px 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    -webkit-box-shadow: 2px 1px 13px 0px;
+            box-shadow: 2px 1px 13px 0px;
+  }
+  section#section04 .box .content p {
+    text-align: center;
+    font-size: 15px;
+  }
+  section#section04 .box .content p strong {
+    display: block;
+  }
+}
